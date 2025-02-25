@@ -30,7 +30,7 @@ def answer_query(query, OPENAI_API_KEY):
     D, I = index.search(embeddings_np, 1)
     content = load_content()
     
-    llm = ChatOpenAI(model="gpt-4o", openai_api_key=OPENAI_API_KEY)
+    llm = ChatOpenAI(model="gpt-4o-mini", openai_api_key=OPENAI_API_KEY)
     # llm = OpenAI(openai_api_key=OPENAI_API_KEY)
     prompt = PromptTemplate.from_template(
             """You are an assistant for question-answering tasks. 
